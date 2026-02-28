@@ -1,0 +1,20 @@
+{
+  "node": {
+    "00367a8de1cf9e8eef22053ba491b242c3954fc0ed": {
+      "workers": {
+        "app/admin/stock/page": {
+          "moduleId": 24370,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/stock/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "toro-store-app/src/actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

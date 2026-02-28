@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Package {
+  id          String   @id @default(uuid())
+  name        String
+  description String?  @db.Text
+  price       String   // e.g. "Rp 50.000"
+  category    String   // e.g. "Basic", "Premium", "Special"
+  imageUrl    String?
+  stock       Int      @default(0)
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  orders      Order[]
+}
+
+enum OrderStatus {
+  NEW
+  CONFIRMED
+  DONE
+  CANCELED
+}
+
+model Order {
+  id         String      @id @default(uuid())
+  orderCode  String      @unique
+  packageId  String
+  package    Package     @relation(fields: [packageId], references: [id])
+  itemName   String
+  mlbbId     String
+  serverId   String
+  nickname   String?
+  note       String?
+  waNumber   String?
+  status     OrderStatus @default(NEW)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  events     OrderEvent[]
+}
+
+model OrderEvent {
+  id        String   @id @default(uuid())
+  orderId   String
+  eventType String
+  message   String?
+  createdAt DateTime @default(now())
+  order     Order    @relation(fields: [orderId], references: [id])
+}

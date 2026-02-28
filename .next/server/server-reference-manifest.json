@@ -1,0 +1,349 @@
+{
+  "node": {
+    "00367a8de1cf9e8eef22053ba491b242c3954fc0ed": {
+      "workers": {
+        "app/admin/login/page": {
+          "moduleId": 57924,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        },
+        "app/admin/orders/page": {
+          "moduleId": 91120,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        },
+        "app/admin/packages/[id]/edit/page": {
+          "moduleId": 98435,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        },
+        "app/admin/packages/new/page": {
+          "moduleId": 11874,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        },
+        "app/admin/packages/page": {
+          "moduleId": 11032,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        },
+        "app/admin/stock/page": {
+          "moduleId": 24370,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/login/page": "action-browser",
+        "app/admin/orders/page": "action-browser",
+        "app/admin/packages/[id]/edit/page": "action-browser",
+        "app/admin/packages/new/page": "action-browser",
+        "app/admin/packages/page": "action-browser",
+        "app/admin/page": "action-browser",
+        "app/admin/stock/page": "action-browser"
+      },
+      "filename": "toro-store-app/src/actions/auth.ts",
+      "exportedName": "logout"
+    },
+    "0003e24c72119d99d60e6b08897eee34e39314d8d6": {
+      "workers": {
+        "app/admin/orders/page": {
+          "moduleId": 91120,
+          "async": false,
+          "exportedName": "getAdminOrders",
+          "filename": "toro-store-app/src/actions/order.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "getAdminOrders",
+          "filename": "toro-store-app/src/actions/order.ts"
+        }
+      },
+      "layer": {
+        "app/admin/orders/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/order.ts",
+      "exportedName": "getAdminOrders"
+    },
+    "404f39c2a5262027a5816a44dca05a6f113d484041": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "createOrder",
+          "filename": "toro-store-app/src/actions/order.ts"
+        },
+        "app/order/page": {
+          "moduleId": 46670,
+          "async": false,
+          "exportedName": "createOrder",
+          "filename": "toro-store-app/src/actions/order.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/order/page": "action-browser"
+      },
+      "filename": "toro-store-app/src/actions/order.ts",
+      "exportedName": "createOrder"
+    },
+    "607a4ba007ad35822c250f276d7b610909fc4e837d": {
+      "workers": {
+        "app/admin/orders/page": {
+          "moduleId": 91120,
+          "async": false,
+          "exportedName": "updateOrderStatus",
+          "filename": "toro-store-app/src/actions/order.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "updateOrderStatus",
+          "filename": "toro-store-app/src/actions/order.ts"
+        }
+      },
+      "layer": {
+        "app/admin/orders/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/order.ts",
+      "exportedName": "updateOrderStatus"
+    },
+    "00a26aa4c3a5962b0a0bbc37353b22e29acb27ad7d": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "getPackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/order/page": {
+          "moduleId": 46670,
+          "async": false,
+          "exportedName": "getPackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/packages/page": {
+          "moduleId": 46581,
+          "async": false,
+          "exportedName": "getPackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/order/page": "action-browser",
+        "app/packages/page": "action-browser"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "getPackages"
+    },
+    "00bf5bb6ae0836908cd09bca8b09567e320355edfe": {
+      "workers": {
+        "app/admin/packages/page": {
+          "moduleId": 11032,
+          "async": false,
+          "exportedName": "getAdminPackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "getAdminPackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/packages/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "getAdminPackages"
+    },
+    "400606749c04c88e038e57aabb785454ba0370a5e6": {
+      "workers": {
+        "app/admin/packages/page": {
+          "moduleId": 11032,
+          "async": false,
+          "exportedName": "bulkDeletePackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "bulkDeletePackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/packages/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "bulkDeletePackages"
+    },
+    "4025fd0bf5d8db3ddbd01d6012244b6fce0a3f9499": {
+      "workers": {
+        "app/admin/packages/new/page": {
+          "moduleId": 11874,
+          "async": false,
+          "exportedName": "createPackage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "createPackage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/packages/new/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "createPackage"
+    },
+    "4055b326a74a867b2261dc8bfe76b04b8b931db590": {
+      "workers": {
+        "app/admin/packages/[id]/edit/page": {
+          "moduleId": 98435,
+          "async": false,
+          "exportedName": "getPackageById",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "getPackageById",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/packages/[id]/edit/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "getPackageById"
+    },
+    "407612e46e9b2b45a6e50b35ee21978acc5ef7167d": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "uploadPackageImage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "uploadPackageImage"
+    },
+    "40c36cea8ee0ea340a719713fe6416e15ae2c9f16b": {
+      "workers": {
+        "app/admin/packages/page": {
+          "moduleId": 11032,
+          "async": false,
+          "exportedName": "deletePackage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "deletePackage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/packages/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "deletePackage"
+    },
+    "607c92be919f7a7a0f4c88af65e19c471f3103379d": {
+      "workers": {
+        "app/admin/packages/page": {
+          "moduleId": 11032,
+          "async": false,
+          "exportedName": "bulkUpdatePackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "bulkUpdatePackages",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/packages/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "bulkUpdatePackages"
+    },
+    "60fdbde4d29d67209ccf4876f8d564273206849906": {
+      "workers": {
+        "app/admin/packages/[id]/edit/page": {
+          "moduleId": 98435,
+          "async": false,
+          "exportedName": "updatePackage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/packages/page": {
+          "moduleId": 11032,
+          "async": false,
+          "exportedName": "updatePackage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        },
+        "app/admin/page": {
+          "moduleId": 75768,
+          "async": false,
+          "exportedName": "updatePackage",
+          "filename": "toro-store-app/src/actions/package.ts"
+        }
+      },
+      "layer": {
+        "app/admin/packages/[id]/edit/page": "action-browser",
+        "app/admin/packages/page": "action-browser",
+        "app/admin/page": "rsc"
+      },
+      "filename": "toro-store-app/src/actions/package.ts",
+      "exportedName": "updatePackage"
+    },
+    "4068f8e79d3f7a0057b5d35385d322e86e1a27c07e": {
+      "workers": {
+        "app/admin/login/page": {
+          "moduleId": 57924,
+          "async": false,
+          "exportedName": "login",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/login/page": "action-browser"
+      },
+      "filename": "toro-store-app/src/actions/auth.ts",
+      "exportedName": "login"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "r73tTkt1z7L1kJWHEAeNigfauX3c5jgicCeI/w0O4N0="
+}

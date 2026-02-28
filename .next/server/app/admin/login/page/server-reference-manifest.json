@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00367a8de1cf9e8eef22053ba491b242c3954fc0ed": {
+      "workers": {
+        "app/admin/login/page": {
+          "moduleId": 57924,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/login/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "toro-store-app/src/actions/auth.ts"
+    },
+    "4068f8e79d3f7a0057b5d35385d322e86e1a27c07e": {
+      "workers": {
+        "app/admin/login/page": {
+          "moduleId": 57924,
+          "async": false,
+          "exportedName": "login",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/login/page": "action-browser"
+      },
+      "exportedName": "login",
+      "filename": "toro-store-app/src/actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

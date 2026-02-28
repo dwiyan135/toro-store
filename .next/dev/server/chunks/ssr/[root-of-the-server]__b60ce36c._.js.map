@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/dwiya/.gemini/antigravity/scratch/toro-store-app/src/app/admin/stock/page.tsx"],"sourcesContent":["import { redirect } from 'next/navigation';\r\n\r\nexport default function StockPage() {\r\n  redirect('/admin/packages');\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;AAAA;;AAEe,SAAS;IACtB,IAAA,iMAAQ,EAAC;AACX"}}]
+}

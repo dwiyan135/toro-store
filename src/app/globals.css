@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --bg-dark: #0b0f19;
+  --bg-darker: #060910;
+  --bg-card: #151b2b;
+  --bg-nav: rgba(11, 15, 25, 0.9);
+  
+  --primary: #00f0ff;      /* Electric Blue - Esports Vibe */
+  --primary-glow: rgba(0, 240, 255, 0.4);
+  --secondary: #d4af37;    /* Gold - Premium Vibe */
+  --secondary-glow: rgba(212, 175, 55, 0.4);
+  
+  --text-main: #f0f4f8;
+  --text-muted: #9ba4b5;
+  
+  --success: #2ecca6;
+  --whatsapp: #25d366;
+  
+  /* Effects */
+  --shadow-glow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: var(--shadow-glow);
+  }
+  .border-glow {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-custom {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 var(--primary-glow); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 240, 255, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+}
+
+.animate-pulse-custom {
+  animation: pulse-custom 2s infinite;
+}
+
+/* Sticky Header effect */
+.header-scrolled {
+  background-color: var(--bg-nav);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 0 !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* React Phone Input 2 Overrides */
+.react-tel-input .flag-dropdown {
+  background-color: transparent !important;
+  border: 1px solid #404040 !important;
+  border-radius: 0.75rem 0 0 0.75rem !important;
+}
+
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 0.75rem 0 0 0.75rem !important;
+}
+
+.react-tel-input .country-list {
+  background-color: #171717 !important;
+  border: 1px solid #404040 !important;
+  border-radius: 0.75rem !important;
+  color: #d4d4d8 !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  color: #60a5fa !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  color: #60a5fa !important;
+}
+
+.react-tel-input .country-list .search {
+  background-color: #0a0a0a !important;
+  padding: 10px 14px !important;
+}
+
+.react-tel-input .country-list .search-box {
+  background-color: #171717 !important;
+  border: 1px solid #404040 !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+  width: 100% !important;
+  margin: 0 !important;
+}

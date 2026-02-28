@@ -1,0 +1,50 @@
+{
+  "node": {
+    "00367a8de1cf9e8eef22053ba491b242c3954fc0ed": {
+      "workers": {
+        "app/admin/orders/page": {
+          "moduleId": 91120,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "toro-store-app/src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/orders/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "toro-store-app/src/actions/auth.ts"
+    },
+    "0003e24c72119d99d60e6b08897eee34e39314d8d6": {
+      "workers": {
+        "app/admin/orders/page": {
+          "moduleId": 91120,
+          "async": false,
+          "exportedName": "getAdminOrders",
+          "filename": "toro-store-app/src/actions/order.ts"
+        }
+      },
+      "layer": {
+        "app/admin/orders/page": "action-browser"
+      },
+      "exportedName": "getAdminOrders",
+      "filename": "toro-store-app/src/actions/order.ts"
+    },
+    "607a4ba007ad35822c250f276d7b610909fc4e837d": {
+      "workers": {
+        "app/admin/orders/page": {
+          "moduleId": 91120,
+          "async": false,
+          "exportedName": "updateOrderStatus",
+          "filename": "toro-store-app/src/actions/order.ts"
+        }
+      },
+      "layer": {
+        "app/admin/orders/page": "action-browser"
+      },
+      "exportedName": "updateOrderStatus",
+      "filename": "toro-store-app/src/actions/order.ts"
+    }
+  },
+  "edge": {}
+}
