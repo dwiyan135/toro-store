@@ -12,6 +12,7 @@ const navItems = [
   { href: '/admin', label: 'Dashboard', icon: 'fa-chart-line', exact: true },
   { href: '/admin/orders', label: 'Data Order', icon: 'fa-list-check' },
   { href: '/admin/packages', label: 'Paket', icon: 'fa-layer-group' },
+  { href: '/admin/users', label: 'Reseller', icon: 'fa-users' },
   { href: '/admin/stock', label: 'Stok Lama', icon: 'fa-boxes-stacked' },
 ];
 
@@ -30,7 +31,7 @@ export function AdminLayoutClient({ children }: { children: React.ReactNode }) {
 
   const handleLogout = async () => {
     await logout();
-    router.push('/admin/login');
+    router.push('/login');
   };
 
   const isActive = (item: typeof navItems[0]) =>

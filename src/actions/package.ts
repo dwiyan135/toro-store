@@ -49,6 +49,7 @@ export async function createPackage(data: {
   name: string;
   description?: string;
   price: string;
+  resellerPrice?: string;
   category: string;
   imageUrl?: string;
   stock: number;
@@ -59,6 +60,7 @@ export async function createPackage(data: {
     await prisma.package.create({ data });
     revalidatePath('/');
     revalidatePath('/admin/packages');
+    revalidatePath('/reseller');
     return { success: true };
   } catch (error) {
     console.error('Failed to create package:', error);
@@ -72,6 +74,7 @@ export async function updatePackage(
     name?: string;
     description?: string;
     price?: string;
+    resellerPrice?: string;
     category?: string;
     imageUrl?: string;
     stock?: number;
@@ -83,6 +86,7 @@ export async function updatePackage(
     await prisma.package.update({ where: { id }, data });
     revalidatePath('/');
     revalidatePath('/admin/packages');
+    revalidatePath('/reseller');
     return { success: true };
   } catch (error) {
     console.error('Failed to update package:', error);

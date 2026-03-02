@@ -7,19 +7,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Package {
-  id          String   @id @default(uuid())
-  name        String
-  description String?  @db.Text
-  price       String   // e.g. "Rp 50.000"
-  category    String   // e.g. "Basic", "Premium", "Special"
-  imageUrl    String?
-  stock       Int      @default(0)
-  isActive    Boolean  @default(true)
-  sortOrder   Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  orders      Order[]
+// ===== ENUMS =====
+enum UserRole {
+  ADMIN
+  RESELLER
 }
 
 enum OrderStatus {
@@ -29,17 +20,97 @@ enum OrderStatus {
   CANCELED
 }
 
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
+// ===== MODELS =====
+
+model User {
+  id                 String    @id @default(uuid())
+  username           String    @unique
+  passwordHash       String
+  role               UserRole  @default(RESELLER)
+
+  // Identity
+  fullName           String
+  email              String?
+  phone              String
+  ktpNumber          String?
+
+  // Store Info
+  storeName          String
+  storeDescription   String?   @db.Text
+  storeInstagram     String?
+  storePlatform      String?   // e.g. "Shopee, WhatsApp, TikTok Shop"
+  address            String?   @db.Text
+
+  // Bank Info
+  bankName           String?
+  bankAccountNumber  String?
+  bankAccountName    String?
+
+  // Admin
+  isActive           Boolean   @default(true)
+  adminNote          String?   @db.Text
+  joinDate           DateTime  @default(now())
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  orders             Order[]
+}
+
+model Package {
+  id            String   @id @default(uuid())
+  name          String
+  description   String?  @db.Text
+  price         String   // e.g. "Rp 50.000"
+  resellerPrice String?  // e.g. "Rp 42.000" - harga khusus reseller
+  category      String   // e.g. "Basic", "Premium", "Special"
+  imageUrl      String?
+  stock         Int      @default(0)
+  isActive      Boolean  @default(true)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  orders        Order[]
+}
+
 model Order {
   id         String      @id @default(uuid())
   orderCode  String      @unique
   packageId  String
   package    Package     @relation(fields: [packageId], references: [id])
+
+  // Item Info
   itemName   String
+  qty        Int         @default(1)
+  totalPrice String?     // total harga (bisa harga reseller x qty)
+
+  // Game Account
   mlbbId     String
   serverId   String
   nickname   String?
   note       String?
+
+  // Customer Contact
   waNumber   String?
+
+  // Payment
+  paymentStatus   PaymentStatus @default(PENDING)
+  paymentMethod   String?       // "Transfer BCA", "Dana", etc.
+  paymentProofUrl String?       // link/URL bukti transfer
+  payDate         DateTime?     // tanggal bayar dikonfirmasi
+  finishedDate    DateTime?     // tanggal order selesai diproses
+
+  // Reseller Info
+  storeName  String?     // nama store reseller (auto-filled)
+  resellerId String?     // FK ke User (null = order publik)
+  reseller   User?       @relation(fields: [resellerId], references: [id])
+
+  // Order Lifecycle
   status     OrderStatus @default(NEW)
   createdAt  DateTime    @default(now())
   updatedAt  DateTime    @updatedAt
